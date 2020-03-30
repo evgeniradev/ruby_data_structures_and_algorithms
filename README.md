@@ -2,6 +2,7 @@
 
 Ruby implementations of popular data structures.
 
+* BinarySearchTree
 * LinkedList
 
 ## License
