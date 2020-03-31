@@ -5,7 +5,7 @@ class Kueue
     @length = 0
   end
 
-  attr_reader :first, :last, :length
+  attr_reader :length
 
   def peek
     first
@@ -44,12 +44,16 @@ class Kueue
 
     node
   end
+
+  private
+
+  attr_reader :first, :last
 end
 
 class Node
-  def initialize(value, next_node = nil)
+  def initialize(value)
     @value = value
-    @next = next_node
+    @next = nil
   end
 
   attr_accessor :value, :next

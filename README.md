@@ -6,6 +6,7 @@ Ruby implementations of popular Data Structures and Algorithms.
 * BinarySearchTree
 * LinkedList
 * Queue/Kueue
+* Stack
 
 ##### Algorithms
 * MergeSort

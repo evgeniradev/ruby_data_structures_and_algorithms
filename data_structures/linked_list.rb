@@ -87,9 +87,9 @@ class LinkedList
 end
 
 class Node
-  def initialize(value, next_node = nil)
+  def initialize(value)
     @value = value
-    @next = next_node
+    @next = nil
   end
 
   attr_accessor :value, :next
