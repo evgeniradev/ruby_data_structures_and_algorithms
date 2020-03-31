@@ -15,10 +15,6 @@ class MergeSort
     new_arr = []
 
     while left_arr_index < left_arr.length && right_arr_index < right_arr.length
-      unless left_arr[left_arr_index].is_a?(Numeric) && right_arr[right_arr_index].is_a?(Numeric)
-        raise 'Array must only contain numeric values.'
-      end
-
       if left_arr[left_arr_index] <= right_arr[right_arr_index]
         new_arr << left_arr[left_arr_index]
         left_arr_index += 1
