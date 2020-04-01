@@ -9,6 +9,7 @@ Ruby implementations of popular Data Structures and Algorithms.
 * Stack
 
 ##### Algorithms
+* BubbleSort
 * MergeSort
 
 ## License
