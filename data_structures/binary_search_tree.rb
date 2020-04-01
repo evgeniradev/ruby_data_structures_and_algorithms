@@ -86,7 +86,7 @@ class BinarySearchTree
     node
   end
 
-  def search(value)
+  def lookup(value)
     parent_node, direction, status = find_parent_node(value) unless root.value == value
 
     return puts('Node not found.') if status == :child_node_does_not_exist
