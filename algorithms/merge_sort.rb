@@ -1,6 +1,6 @@
 class MergeSort
   def self.call(arr)
-    raise ArgumentError.new('Argument must be an Array.') unless arr.kind_of?(Array)
+    raise(ArgumentError, 'Argument must be an Array.') unless arr.is_a?(Array)
 
     return arr if arr.length <= 1
 

@@ -1,19 +1,19 @@
 class BubbleSort
   def self.call(arr)
-    raise ArgumentError.new('Argument must be an Array.') unless arr.kind_of?(Array)
+    raise(ArgumentError, 'Argument must be an Array.') unless arr.is_a?(Array)
 
     loop do
       swap_occurred = false
 
-      arr.each_with_index do |element, index|
-        break unless arr[index + 1]
+      arr.each_with_index do |element, i|
+        break unless arr[i + 1]
 
-        next if element < arr[index + 1]
+        next if element <= arr[i + 1]
 
         swap_occurred = true
 
-        arr[index] = arr[index + 1]
-        arr[index + 1] = element
+        arr[i] = arr[i + 1]
+        arr[i + 1] = element
       end
 
       break unless swap_occurred
