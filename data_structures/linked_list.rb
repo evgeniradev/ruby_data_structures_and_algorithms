@@ -24,10 +24,10 @@ class LinkedList
     node
   end
 
-  def insert(value, index)
-    return prepend(value) if index.zero?
+  def insert(value, i)
+    return prepend(value) if i.zero?
 
-    previous_node = find_previous_node(index)
+    previous_node = find_previous_node(i)
 
     return append(value) if previous_node&.next.nil?
 
@@ -38,17 +38,17 @@ class LinkedList
     node
   end
 
-  def remove(index)
+  def remove(i)
     return 'You cannot delete the last node.' if @length == 1
 
-    if index.zero?
+    if i.zero?
       node = @head
       @head = @head.next
       @length -= 1
       return node
     end
 
-    previous_node = find_previous_node(index)
+    previous_node = find_previous_node(i)
 
     return 'Node does not exist.' if previous_node&.next.nil?
 
@@ -62,21 +62,21 @@ class LinkedList
 
   def print
     node = @head
-    index = 0
+    i = 0
 
     while node
-      puts "#{index}: #{node.value}"
-      index += 1
+      puts "#{i}: #{node.value}"
+      i += 1
       node = node.next
     end
   end
 
   private
 
-  def find_previous_node(index)
+  def find_previous_node(i)
     node = @head
 
-    (index - 1).times do
+    (i - 1).times do
       node = node&.next
 
       break unless node
