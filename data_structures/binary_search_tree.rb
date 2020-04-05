@@ -28,7 +28,7 @@ class BinarySearchTree
     node
   end
 
-  def remove(value)
+  def remove_by_value(value)
     parent_node, direction, status = find_parent_node(value) unless root.value == value
 
     if status == :child_node_does_not_exist

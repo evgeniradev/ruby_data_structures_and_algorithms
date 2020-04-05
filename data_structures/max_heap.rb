@@ -1,5 +1,7 @@
 class MaxHeap < Array
   def initialize(array = [])
+    raise(ArgumentError, 'Argument must be an Array.') unless array.is_a?(Array)
+
     @heapsize = array.length
 
     super(build_max_heap(array))
@@ -23,7 +25,7 @@ class MaxHeap < Array
     value
   end
 
-  def remove!(value)
+  def remove_by_value!(value)
     i = index(value)
 
     return puts('Node does not exist') unless i

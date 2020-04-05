@@ -38,7 +38,7 @@ class LinkedList
     node
   end
 
-  def remove(i)
+  def remove_by_index(i)
     return 'You cannot delete the last node.' if @length == 1
 
     if i.zero?
