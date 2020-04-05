@@ -1,39 +1,39 @@
 class InsertionSort
-  def self.call(arr)
-    raise(ArgumentError, 'Argument must be an Array.') unless arr.is_a?(Array)
+  def self.call(array)
+    raise(ArgumentError, 'Argument must be an Array.') unless array.is_a?(Array)
 
     i = 1
 
-    while i < arr.length
+    while i < array.length
       j = 0
       z = i
 
       i += 1
 
-      if arr[z] <= arr[j]
-        arr.unshift(arr.delete_at(z))
+      if array[z] <= array[j]
+        array.unshift(array.delete_at(z))
         next
       else
         j += 1
       end
 
-      next if arr[z] >= arr[z - 1]
+      next if array[z] >= array[z - 1]
 
       tmp = nil
 
       while j < z
-        if arr[z] > arr[j]
+        if array[z] > array[j]
           j += 1
         else
-          tmp = arr[z]
-          arr[z] = arr[z - 1]
-          arr[z - 1] = tmp
+          tmp = array[z]
+          array[z] = array[z - 1]
+          array[z - 1] = tmp
 
           z -= 1
         end
       end
     end
 
-    arr
+    array
   end
 end
