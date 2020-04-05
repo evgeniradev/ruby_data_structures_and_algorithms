@@ -72,7 +72,13 @@ class MaxHeap < Array
     array
   end
 
-  protected *[].public_methods(false).reject { |m| %i[inspect [] sort].include?(m) }
+  def inspect
+    "#<MaxHeap:#{super}>"
+  end
+
+  permitted_array_methods = %i[inspect [] sort map each each_with_index to_a]
+
+  protected *[].public_methods(false).reject { |m| permitted_array_methods.include?(m) }
 
   private
 
