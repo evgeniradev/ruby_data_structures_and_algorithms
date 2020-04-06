@@ -14,6 +14,7 @@ Ruby implementations of popular Data Structures and Algorithms.
 * HeapSort
 * InsertionSort
 * MergeSort
+* QuickSort
 
 ## License
 
