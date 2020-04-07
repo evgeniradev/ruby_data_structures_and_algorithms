@@ -10,13 +10,6 @@ class InsertionSort
 
       i += 1
 
-      if array[z] <= array[j]
-        array.unshift(array.delete_at(z))
-        next
-      else
-        j += 1
-      end
-
       next if array[z] >= array[z - 1]
 
       tmp = nil
